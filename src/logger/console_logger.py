@@ -1,8 +1,10 @@
-class ConsoleLogger:
+from logger.logger import Logger, LoggerFactory
+
+class ConsoleLogger(Logger):
     def log(self, message: str) -> None:
         print(f"[Console] {message}")
 
 
-class ConsoleLoggerFactory:
+class ConsoleLoggerFactory(LoggerFactory):
     def create(self):
         return ConsoleLogger()
