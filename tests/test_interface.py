@@ -1,4 +1,4 @@
-from logger.logger_interface import Logger, LoggerFactory
+from logger.interface import Logger, LoggerFactory
 from logger.console_logger import ConsoleLoggerFactory
 
 
