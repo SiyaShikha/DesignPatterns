@@ -12,3 +12,10 @@ def test_file_logger_writes_message(tmp_path):
     logger = FileLogger(str(log_file))
     logger.log("Hello")
     assert log_file.read_text() == "Hello\n"
+
+def test_file_logger_appends_messages(tmp_path):
+    log_file = tmp_path / "test.log"
+    logger = FileLogger(str(log_file))
+    logger.log("First message")
+    logger.log("Second message")
+    assert log_file.read_text() == "First message\nSecond message\n"
