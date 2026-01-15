@@ -1,4 +1,4 @@
-from logger.logger import Logger, LoggerFactory
+from logger.interface import Logger, LoggerFactory
 
 class ConsoleLogger(Logger):
     def log(self, message: str) -> None:
