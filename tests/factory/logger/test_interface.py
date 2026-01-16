@@ -1,10 +1,10 @@
-from logger.interface import Logger, LoggerFactory
-from logger.console_logger import ConsoleLoggerFactory
+from factory.logger.interface import Logger, LoggerFactory
+from factory.logger.console_logger import ConsoleLoggerFactory
 
 
 def test_logger_abstract_types():
     factory = ConsoleLoggerFactory()
-    logger = factory.create()
+    logger = factory.create_logger()
     assert isinstance(logger, Logger)
 
 def test_logger_factory_abstract_types():

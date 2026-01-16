@@ -7,5 +7,5 @@ class Logger(ABC):
 
 class LoggerFactory(ABC):
     @abstractmethod
-    def create(self) -> Logger:
+    def create_logger(self) -> Logger:
         pass

@@ -1,9 +1,9 @@
-from logger.console_logger import ConsoleLogger
-from logger.console_logger import ConsoleLoggerFactory
+from factory.logger.console_logger import ConsoleLogger
+from factory.logger.console_logger import ConsoleLoggerFactory
 
 def test_console_factory_creates_console_logger():
     factory = ConsoleLoggerFactory()
-    logger = factory.create()
+    logger = factory.create_logger()
 
     assert isinstance(factory, ConsoleLoggerFactory)
     assert isinstance(logger, ConsoleLogger)

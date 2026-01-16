@@ -1,9 +1,9 @@
-from logger.file_logger import FileLogger, FileLoggerFactory
+from factory.logger.file_logger import FileLogger, FileLoggerFactory
 
 
 def test_file_logger_factory_creates_file_logger():
     factory = FileLoggerFactory()
-    logger = factory.create("app.log")
+    logger = factory.create_logger("app.log")
     assert isinstance(factory, FileLoggerFactory)
     assert isinstance(logger, FileLogger)
 

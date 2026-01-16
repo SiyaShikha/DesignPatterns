@@ -1,4 +1,4 @@
-from logger.interface import Logger, LoggerFactory
+from factory.logger.interface import Logger, LoggerFactory
 
 class ConsoleLogger(Logger):
     def log(self, message: str) -> None:
@@ -6,5 +6,5 @@ class ConsoleLogger(Logger):
 
 
 class ConsoleLoggerFactory(LoggerFactory):
-    def create(self):
+    def create_logger(self):
         return ConsoleLogger()
