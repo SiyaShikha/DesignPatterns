@@ -13,7 +13,6 @@ def test_console_logger_logs_message(capfd):
     test_message = "testing console logger"
     logger.log(test_message)
     captured = capfd.readouterr()
-    # assert f"[Console] {test_message}" in captured.out
     assert captured.out == f"[Console] {test_message}\n"
 
 
