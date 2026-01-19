@@ -25,7 +25,7 @@ class ComputerBuilder:
         return self
 
     def build(self):
-        if not self.cpu or not self.ram:
+        if self.cpu is None or self.ram is None:
             raise ValueError("CPU and RAM are required fields")
         return Computer(
             cpu=self.cpu,
@@ -33,3 +33,10 @@ class ComputerBuilder:
             storage=self.storage,
             gpu=self.gpu
         )
+    
+    def reset(self):
+        self.cpu = None
+        self.ram = None
+        self.storage = None
+        self.gpu = None
+        return self
