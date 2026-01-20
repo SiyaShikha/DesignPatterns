@@ -1,6 +1,6 @@
 import pytest
-from builder.computer_builder import ComputerBuilder
-from builder.computer import Computer
+from builder.computer.computer_builder import ComputerBuilder
+from builder.computer.computer import Computer
 
 
 def test_computer_builder_returns_computer_with_required_components():

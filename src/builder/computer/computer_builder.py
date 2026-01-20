@@ -1,4 +1,4 @@
-from builder.computer import Computer
+from builder.computer.computer import Computer
 
 
 class ComputerBuilder:
