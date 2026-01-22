@@ -6,10 +6,10 @@ def test_app_ink_jet():
     app = PrinterApp()
     ink_jet_printer = InkJetPrinter()
     ink_jet_adapter = InkJetAdapter(ink_jet_printer)
-    app.print(ink_jet_adapter)
+    assert app.print(ink_jet_adapter) == "ink jet"
 
 def test_app_laser():
     app = PrinterApp()
     laser_printer = LaserPrinter()
     laser_adapter = LaserAdapter(laser_printer)
-    app.print(laser_adapter)
+    assert app.print(laser_adapter) == "laser"

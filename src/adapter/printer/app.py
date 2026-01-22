@@ -1,3 +1,3 @@
 class PrinterApp:
     def print(self, printer):
-        printer.print()
+        return printer.print()
