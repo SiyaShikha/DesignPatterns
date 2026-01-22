@@ -1,4 +1,4 @@
-from adapter.printer.printers import InkJetPrinter
+from adapter.printer.printers import InkJetPrinter, LaserPrinter
 
 
 def test_ink_jet_printer():
