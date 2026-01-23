@@ -3,11 +3,19 @@ def uppercase_decorator(function):
         func = function()
         make_uppercase = func.upper()
         return make_uppercase
-
     return wrapper
 
+
+def split_string(function):
+    def wrapper():
+        func = function()
+        splitted_string = func.split()
+        return splitted_string
+    return wrapper 
+
+@split_string
+@uppercase_decorator
 def say_hi():
     return 'hello there'
 
-decorate = uppercase_decorator(say_hi)
-print(decorate())
+print(say_hi())
