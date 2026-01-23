@@ -1,4 +1,7 @@
+from functools import wraps
+
 def uppercase_decorator(function):
+    @wraps(function)
     def wrapper():
         func = function()
         make_uppercase = func.upper()
@@ -7,6 +10,7 @@ def uppercase_decorator(function):
 
 
 def split_string(function):
+    @wraps(function)
     def wrapper():
         func = function()
         splitted_string = func.split()
@@ -19,3 +23,4 @@ def say_hi():
     return 'hello there'
 
 print(say_hi())
+print(say_hi.__name__)
