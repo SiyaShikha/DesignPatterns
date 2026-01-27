@@ -5,5 +5,6 @@ def test_collections_adds_elements():
     collection.add_book("Harry Potter")
     collection.add_book("python")
     
-    assert next(collection) == "Harry Potter"
-    assert next(collection) == "python"
+    iterator = iter(collection)
+    assert next(iterator) == "Harry Potter"
+    assert next(iterator) == "python"

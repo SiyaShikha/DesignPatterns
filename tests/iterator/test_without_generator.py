@@ -1,4 +1,4 @@
-from DesignPatterns.src.iterator.without_generator import BookCollection
+from iterator.without_generator import BookCollection
 
 
 def test_collections_adds_elements():
