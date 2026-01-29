@@ -18,7 +18,19 @@ class BubbleSort(SortingAlgo):
                 break 
         return arr 
     
-# class SelectionSort:
+class SelectionSort(SortingAlgo):
+    def perform_sort(self, arr):
+        size = len(arr)
+        for ind in range(size):
+            min_index = ind
+
+            for j in range(ind + 1, size):
+                if arr[j] < arr[min_index]:
+                    min_index = j
+
+            arr[ind], arr[min_index] = arr[min_index], arr[ind]
+        return arr
+    
 # class InsertionSort:
 # class MergeSort:
 # class QuickSort:
