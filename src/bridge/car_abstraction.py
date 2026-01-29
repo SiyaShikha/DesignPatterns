@@ -1,4 +1,5 @@
-class Car:
+from abc import ABC, abstractmethod
+class Car(ABC):
     _engine = None
     def __init__(self, engine):
         self._engine = engine
@@ -8,10 +9,10 @@ class Car:
 
 
 class Sedan(Car):
-    def start(self):
-        return super().start()
+   def window(self):
+       return "top window"
     
 class Swift(Car):
-    def start(self):
-        return super().start()
+    def window(self):
+       return "side window"
 
